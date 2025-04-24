@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "mp4decrypt"
+exit 0

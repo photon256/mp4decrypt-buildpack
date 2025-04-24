@@ -1,0 +1,12 @@
+#!/bin/sh
+BUILD_DIR=$1
+
+echo "Downloading Bento4 mp4decrypt..."
+mkdir -p "$BUILD_DIR/.bin"
+curl -sSL https://www.bento4.com/downloads/Bento4-SDK-1-6-0-639.x86_64-unknown-linux.zip -o bento4.zip
+unzip -qo bento4.zip -d "$BUILD_DIR/.bin"
+cp "$BUILD_DIR/.bin/Bento4-SDK-*/bin/mp4decrypt" "$BUILD_DIR/.bin/"
+chmod +x "$BUILD_DIR/.bin/mp4decrypt"
+
+echo "mp4decrypt installed in .bin"
+exit 0
